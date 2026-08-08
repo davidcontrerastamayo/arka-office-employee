@@ -1,26 +1,24 @@
-# Guía para correr el Demo del MVP Editorial AI
+# Instrucciones para correr el MVP Editorial
 
-## Prerequisitos
-Asegúrate de tener Node.js y npm instalados en tu máquina.
+## Instalación
 
-## Pasos para correr el proyecto
-1. Clona el repositorio en tu máquina:
-   ```bash
-   git clone https://github.com/davidcontrerastamayo/arka-office-employee.git
-   cd arka-office-employee
-   ```
-2. Instala las dependencias:
+1. Clona el repositorio y navega al directorio del proyecto.
+2. Ejecuta el siguiente comando para instalar las dependencias:
    ```bash
    npm install
    ```
-3. Ejecuta la aplicación:
+
+## Ejecución
+
+1. Para correr el servidor de desarrollo, utiliza:
    ```bash
    npm run dev
    ```
-4. Abre tu navegador y ve a `http://localhost:3000` para ver la aplicación en acción.
 
-## Funcionalidades
-- **Crear un libro**: Puedes escribir un prompt y crear un libro. 
-- **Ver catálogo**: Se listarás los libros creados.
-- **Filtrar por categoría**: Hay un campo para filtrar libros por su categoría.
-- **Ver y editar detalle**: Podrás abrir el detalle de un libro para verlo y editar su información.
+2. Accede a la aplicación en tu navegador en `http://localhost:3000`.
+
+## Características
+- Listado de publicaciones (aunque esté vacío, con un mensaje claro).
+- Crear una nueva publicación que aparece en el listado.
+- Editar publicaciones, donde los cambios se guardan y persisten gracias a `localStorage`.
+- Funcionalidad de búsqueda o filtro por título y estado.
