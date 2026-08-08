@@ -1,11 +1,12 @@
 import React from 'react';
+import Publications from './components/Publications';
 import './App.css';
 
-const App: React.FC = () => {
+const App = () => {
     return (
-        <div className='App'>
+        <div>
             <h1>Editorial Management</h1>
-            <p>This is a demo application for editorial management.</p>
+            <Publications />
         </div>
     );
 };
