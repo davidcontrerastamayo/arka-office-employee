@@ -1,58 +1,49 @@
-# Architecture — MVP Editorial AI
+# Architecture — Editorial MVP
 
 ## Objetivo
-Construir un MVP usable (web) donde los usuarios puedan crear, visualizar y categorizar libros usando IA.
+Construir un MVP web de gestión editorial en el repo del proyecto: catálogo de publicaciones, detalle y flujo básico de creación/edición.
 
 ## IN / OUT
-- IN: Crear libro con IA, ver catálogo, filtrar libros, editar libro.
-- OUT: Pagos, colaboración multiusuario, exportar, integración LLM real.
+- IN: listado de publicaciones, detalle de publicaciones, creación/edición de publicaciones.
+- OUT: CMS, autenticación, multi-tenant, API remota.
 
 ## Dominio
-### Libro
-- Campos: id, título, sinopsis, categoría, estado, createdAt, capítulos, portada.
+### Publicación
+- Campos: id, title, status, date, author, content.
 - Estados: draft | published
-- Reglas: El libro debe tener un estado que determine si está en borrador o publicado.
+- Reglas: una publicación debe tener un título y un autor.
 
 ## Flujos
-1. Crear con IA (mock) → editar → guardar
-2. Catálogo → filtrar → abrir detalle
-3. Detalle → editar categoría/estado
+1. Crear publicación → guardar → listar
+2. Listar → abrir detalle
+3. Detalle → editar → guardar cambios
 
 ## Pantallas
-| Pantalla  | Propósito                                   | Datos                               |
-|-----------|---------------------------------------------|-------------------------------------|
-| Crear     | Crear un libro asistido por IA              | { prompt: string }                  |
-| Catálogo  | Listar y filtrar libros                     | { libros: [id, título, categoría]} |
-| Detalle   | Editar un libro existente                   | { id, título, sinopsis, categoría}  |
+| Pantalla | Propósito | Datos |
+|----------|-----------|-------|
+| Listado de Publicaciones | Mostrar publicaciones | id, title, status, date, author |
+| Detalle de Publicación | Mostrar detalle de una publicación | publication |
 
 ## Contratos
-### CreateBookFromPrompt
-- Input: { prompt: string }
-- Output: { title, synopsis, category, chapters[] }
-- Errores: { validation_error, unable_to_generate }
+### CreatePublication
+- Input: { title: string, status: string, date: string, author: string, content: string }
+- Output: { id: string, title: string, status: string, date: string, author: string, content: string }
+- Errores: título y autor son obligatorios.
 
 ### Persistencia
 - Dónde se guarda: localStorage
-- Shape JSON: { id, title, synopsis, category, state, createdAt, chapters[], cover }
-
-## IA
-- En MVP: mock determinista (no LLM real obligatorio)
-- Fallback si falla: texto predefinido o error mostrado al usuario.
+- Shape JSON: { id, title, status, date, author, content }
 
 ## Decisiones
-| Decisión                        | Elegido                     | Alternativa              | Motivo                                      |
-|---------------------------------|----------------------------|-------------------------|---------------------------------------------|
-| Persistencia                   | localStorage               | estado en memoria        | localStorage permite persistencia fácil     |
-| Mock de IA                     | heurística local           | API real                 | Control total sobre la respuesta en MVP     |
+| Decisión | Elegido | Alternativa | Motivo |
+|----------|---------|-------------|--------|
+| Stack | React con Vite | Otro stack | Ya presente en el repo. |
 
 ## Plan de implementación (para engineering)
-1. Tokens + shell de navegación
-2. Persistencia + modelo Libro
-3. Crear / Catálogo / Detalle
+1. Crear flujo de listado y detalle.
+2. Implementar lógica de creación/edición de publicaciones.
+3. Asegurar persistencia en localStorage.
 
 ## Criterios de aceptación
-- [ ] Puedo crear un libro desde un prompt y verlo en el catálogo.
-- [ ] Puedo filtrar por las categorías mínimas.
-- [ ] Puedo abrir un libro y cambiar su categoría/estado.
-- [ ] Empty states claros cuando no hay libros / no hay resultados de filtro.
-- [ ] Tokens de diseño visibles en la UI.
+- [ ] Listado de publicaciones se muestra correctamente.
+- [ ] Vista de detalle funciona y muestra datos.
