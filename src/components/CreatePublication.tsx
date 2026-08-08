@@ -1,7 +1,1 @@
-import React from 'react';
-
-const CreatePublication = () => {
-    return <div>Create Publication Component</div>;
-};
-
-export default CreatePublication;
+// Placeholder for new CreatePublication component\n// Implement according to the new requirements
