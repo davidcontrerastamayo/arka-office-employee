@@ -40,3 +40,36 @@ Construir un MVP usable (web) donde un usuario pueda crear un libro asistido por
 - Archivo: `src/styles/tokens.css`
 - Acento: #0f766e
 - Notas de implementación: Asegurarse de aplicar tokens en la UI usando var(--color-...).
+
+### src/styles/tokens.css
+:root {
+  --color-bg: #f7f5f2;
+  --color-surface: #ffffff;
+  --color-text: #1c1917;
+  --color-muted: #78716c;
+  --color-accent: #0f766e;
+  --color-border: #e7e5e4;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+}
+
+### src/index.css
+@import './styles/tokens.css';
+
+:root {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
