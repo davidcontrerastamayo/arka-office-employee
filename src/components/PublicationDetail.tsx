@@ -1,1 +1,0 @@
-// Placeholder for new PublicationDetail component\n// Implement according to the new requirements

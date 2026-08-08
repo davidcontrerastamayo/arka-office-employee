@@ -1,1 +1,0 @@
-// Placeholder for new CreatePublication component\n// Implement according to the new requirements
