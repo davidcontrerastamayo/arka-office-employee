@@ -1,40 +1,40 @@
 MVP Editorial AI — app web para crear y organizar libros con ayuda de IA.
 
 ## Objetivo
-Construir un MVP usable (web) donde un usuario pueda:
+Construir un MVP usable (web) en **este repositorio del workspace** donde un usuario pueda:
 1) crear un libro asistido por IA (título, sinopsis, categoría, capítulos borrador),
 2) ver un catálogo/listado de libros,
 3) filtrar y categorizar libros.
 
 ## Alcance del MVP (IN)
-- Autenticación ya existente del producto: no reinventar login; asumir usuario autenticado.
-- Modelo mínimo de Libro: título, sinopsis, categoría (enum o tags), estado (draft/published), fecha de creación, opcional portada (placeholder).
-- Flujo "Crear con IA": formulario corto (idea/prompt del libro) → generar borrador (título + sinopsis + categoría sugerida + outline de 3–5 capítulos) → usuario puede editar → guardar.
-- Vista Catálogo: grid/lista limpia con búsqueda por texto y filtro por categoría.
-- Vista Detalle de libro: ver/editar campos básicos; marcar categoría; publicar/borrador.
-- UI moderna, limpia, accesible; copy en español (i18n-ready si el proyecto ya usa i18n).
-- Persistencia: usar el stack del repo (Convex u storage local del workspace según lo que ya exista). Preferir lo más simple que demuestre el flujo end-to-end.
+- Autenticación: no reinventar login; asumir usuario autenticado o UI sin auth real si el template no la tiene.
+- Modelo mínimo de Libro: id, título, sinopsis, categoría, estado (`draft` | `published`), createdAt, capítulos (outline 3–5), portada opcional (placeholder).
+- Flujo "Crear con IA": formulario corto (idea/prompt) → generar borrador (mock o heurística local si no hay API de IA) → editar → guardar.
+- Vista Catálogo: lista/grid limpia con búsqueda por texto y filtro por categoría.
+- Vista Detalle: ver/editar campos; cambiar categoría/estado.
+- UI moderna y limpia; copy en español.
+- Persistencia: lo más simple del repo (localStorage / estado en memoria / JSON en workspace). Debe demostrar el happy path end-to-end al recargar si usas localStorage.
 
 ## Fuera de alcance (OUT)
 - Pagos, colaboración multi-usuario, export EPUB/PDF, editor tipográfico avanzado.
-- Generación de ilustraciones reales / portadas AI.
+- Generación real de ilustraciones / portadas AI.
 - App mobile nativa.
-- Multi-idioma completo (solo es en UI del MVP está OK si i18n aún no está cableado en esta feature).
+- Integración LLM de producción (un mock determinista del borrador es válido en el MVP).
 
-## Roles y entregables
-- **Arquitectura / Product** (`docs/architecture.md`): dominio Libro, pantallas, contratos de datos, decisiones de stack mínimas, riesgos y plan de implementación en 1 slice.
-- **Diseño** (`docs/design.md`): flujo + specs de pantallas (Crear con IA, Catálogo, Detalle) con empty/loading/error/success, jerarquía limpia, componentes a reutilizar/crear.
-- **Desarrollo**: implementar el MVP según architecture + design, design system (shadcn), TypeScript strict, happy path funcionando. Cómo probar en `docs/editorial-mvp.md`.
+## Definition of done por rol (verificado por Arka)
+- **Arquitectura**: DEBE crear `docs/architecture.md`. Sin ese archivo la task falla.
+- **Diseño**: DEBE crear `docs/design.md` Y `src/styles/tokens.css` (importado en el CSS principal si existe). Solo Markdown = FALLA.
+- **Desarrollo**: DEBE cambiar código de aplicación bajo `src/` (pantallas Crear / Catálogo / Detalle). Solo archivos en `docs/` o `Oficina/` = FALLA. Además deja `docs/editorial-mvp.md` con cómo probar.
 
 ## Categorías mínimas
-Ficción, No ficción, Infantil, Poesía (extensible después).
+Ficción, No ficción, Infantil, Poesía.
 
-## Criterios de aceptación
+## Criterios de aceptación del producto
 - Puedo crear un libro desde un prompt y verlo en el catálogo.
 - Puedo filtrar por las categorías mínimas.
 - Puedo abrir un libro y cambiar su categoría/estado.
 - Empty states claros cuando no hay libros / no hay resultados de filtro.
-- Código tipado, UI coherente; docs de architecture/design/prueba en el repo.
+- Tokens de diseño visibles en la UI (colores/spacing del `tokens.css`).
 
 ## Calidad
-Priorizar claridad y velocidad de demo sobre features. Una composición limpia por pantalla, un CTA primario obvio, sin decoración innecesaria. Diseño y código deben alinearse: no inventar pantallas fuera del brief.
+Priorizar demo clara sobre features. Una composición limpia por pantalla, un CTA primario obvio. Diseño y código alineados al brief; no inventar pantallas fuera de alcance.
