@@ -1,2 +1,3 @@
-/* Importando tokens de estilos */
-@import './styles/tokens.css';
+.App {
+    text-align: center;
+}

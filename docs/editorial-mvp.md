@@ -1,29 +1,29 @@
-# Editorial MVP - Instructions to Run
+# Editorial MVP
 
-## Prerequisites
-- Node.js installed on your machine.
+## ¿Cómo correr el demo?
 
-## Steps to Run the Application
-1. Clone the repository: 
-   ```bash
-   git clone https://github.com/davidcontrerastamayo/arka-office-employee
-   cd arka-office-employee
-   ```
-2. Install the dependencies: 
+Para probar la aplicación, puedes seguir estos pasos:
+
+1. **Instalar dependencias**:
    ```bash
    npm install
    ```
-3. Run the development server: 
+2. **Correr el desarrollo local**:
    ```bash
    npm run dev
    ```
-4. Open your browser and navigate to `http://localhost:3000`.
+3. **Compilar para producción**:
+   ```bash
+   npm run build
+   ```
+   Para ver el resultado de producción, utiliza:
+   ```bash
+   npm run serve
+   ```
 
-## Features
-- View the list of publications with title, status, date, and author.
-- Create or edit publications using a form.
-- Search for publications by title.
-- Filter publications by status (e.g., Published, Draft, Review).
+## Pantallas implementadas
 
-## Notes
-- Changes in publication data are persisted using localStorage.
+1. **Catálogo**: Listado de publicaciones.
+2. **Crear publicación**: Formulario de creación de publicación.
+3. **Detalle**: Vista de detalles de la publicación.
+4. **Editar**: Formulario para editar la publicación.

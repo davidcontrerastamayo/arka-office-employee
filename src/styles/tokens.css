@@ -1,0 +1,7 @@
+/* Design Tokens */
+:root {
+    --primary-color: #6200ea;
+    --secondary-color: #03dac6;
+    --text-color: #000000;
+    --background-color: #ffffff;
+}

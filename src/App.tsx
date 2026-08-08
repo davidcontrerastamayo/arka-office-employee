@@ -1,9 +1,11 @@
 import React from 'react';
+import './App.css';
 
-const App = () => {
+const App: React.FC = () => {
     return (
-        <div>
-            <h1>Gestión Editorial MVP</h1>
+        <div className='App'>
+            <h1>Editorial Management</h1>
+            <p>This is a demo application for editorial management.</p>
         </div>
     );
 };
