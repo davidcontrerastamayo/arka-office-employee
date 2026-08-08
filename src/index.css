@@ -1,13 +1,9 @@
 @import './styles/tokens.css';
 
-:root {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
 body {
-  margin: 0;
-  font-family: var(--font-sans);
-  background-color: var(--color-bg);
-  color: var(--color-text);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
