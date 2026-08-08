@@ -1,24 +1,25 @@
-# Cómo correr el MVP Editorial AI
+# Cómo correr el demo del MVP Editorial AI
 
-## Instrucciones para probar la aplicación
-
-1. **Instalación de dependencias**:
-   Asegúrate de que todas las dependencias estén instaladas ejecutando:
+## Pasos para probar la aplicación:
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/davidcontrerastamayo/arka-office-employee
+   cd arka-office-employee
+   ```
+2. Instala las dependencias:
    ```bash
    npm install
    ```
-
-2. **Ejecutar la aplicación**:
-   Para iniciar el server de desarrollo, ejecuta:
+3. Ejecuta la aplicación:
    ```bash
    npm run dev
    ```
+4. Abre en tu navegador `http://localhost:3000` (o el puerto que aparezca en la consola).
 
-3. **Acceder a la aplicación**:
-   Abre tu navegador y ve a `http://localhost:3000` para interactuar con la aplicación.
+## Funcionalidades:
+- Crear un libro asistido por IA desde un prompt.
+- Ver el catálogo de libros existentes.
+- Filtrar libros por categorías definidas.
+- Editar la información de los libros.
 
-## Funcionalidades del MVP
-
-- **Crear un libro**: Usa el formulario para ingresar un prompt. Se generará un borrador automáticamente.
-- **Ver y filtrar libros**: Accede al catálogo para ver los libros creados y filtra por categoría.
-- **Editar detalles del libro**: Accede a la vista Detalle para ver y editar los campos del libro.
+Asegúrate de que tienes un entorno adecuado con Node.js instalado.
