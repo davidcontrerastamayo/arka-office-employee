@@ -1,11 +1,18 @@
-# Cómo probar el MVP Editorial AI
+# Instrucciones para probar el MVP Editorial AI
 
-## Pasos para probar
-1. **Crear un libro**: Navegar a la pantalla de creación y proporcionar un prompt para generar un libro asistido por IA.
-2. **Ver catálogo**: Una vez creado, el libro debería aparecer en el catálogo.
-3. **Filtrar libros**: Utilizar la funcionalidad de filtrado para ver libros por categoría.
-4. **Editar un libro**: Seleccionar un libro del catálogo y cambiar su categoría o estado.
-5. **Empty states**: Probar el comportamiento de la interfaz cuando no hay libros.
+## Pasos para correr el demo:
+1. Asegúrate de tener todas las dependencias instaladas.
+   ```bash
+   npm install
+   ```
+2. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+3. Abre tu navegador y dirígete a `http://localhost:3000`.
 
-## Notas
-- Asegúrate de que todos los estados (empty, loading, success, error) se muestran adecuadamente en cada pantalla.
+## Funcionalidades:
+- **Crear un libro**: Ingresa un prompt y haz clic en "Generar borrador". Luego podrás editar y guardar el libro.
+- **Ver catálogo**: Puedes ver todos los libros creados en un listado o grid, con opciones de búsqueda.
+- **Filtrar libros**: Utiliza los filtros disponibles para buscar libros por categoría. 
+- **Detalles del libro**: Haz clic en un libro para ver sus detalles, editar la información y cambiar su estado.
