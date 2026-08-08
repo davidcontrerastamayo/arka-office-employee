@@ -1,7 +1,7 @@
 import React from 'react';
 
-const App: React.FC = () => {
-    return <h1>Catálogo de Publicaciones Editoriales</h1>;
+const App = () => {
+    return <div>Editorial Management MVP</div>;
 };
 
 export default App;

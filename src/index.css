@@ -1,8 +1,7 @@
 @import './styles/tokens.css';
 
-:root {
+body {
     background-color: var(--color-bg);
     color: var(--color-text);
+    font-family: Arial, sans-serif;
 }
-
-/* Add here other global styles needed */
