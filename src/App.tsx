@@ -1,12 +1,11 @@
 import React from 'react';
-import Publications from './components/Publications';
 import './App.css';
 
-const App = () => {
+const App: React.FC = () => {
     return (
-        <div>
+        <div className="App">
             <h1>Editorial Management</h1>
-            <Publications />
+            <p>Your content management system is ready!</p>
         </div>
     );
 };

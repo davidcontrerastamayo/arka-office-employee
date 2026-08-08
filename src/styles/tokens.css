@@ -1,7 +1,8 @@
 :root {
-    --color-primary: #ff6347;
-    --color-secondary: #4caf50;
-    --spacing: 8px;
+    --primary-color: #4CAF50;
+    --secondary-color: #FFC107;
+    --text-color: #000;
+    --background-color: #fff;
     --border-radius: 4px;
     --font-family: 'Arial', sans-serif;
 }
