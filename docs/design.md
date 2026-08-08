@@ -1,46 +1,45 @@
 # Design — Editorial MVP
 
 ## Objetivo
-Construir una interfaz clara y moderna para la app web del MVP Editorial AI, donde los usuarios puedan fácilmente crear y organizar libros asistidos por IA.
+Diseñar una interfaz clara, moderna y funcional para el MVP Editorial AI, donde los usuarios puedan interactuar con el sistema para crear, visualizar y categorizar libros.
 
 ## Flujo
-1. Crear un libro asistido por IA: el usuario ingresa un prompt, genera un borrador, edita y guarda.
-2. Visualizar el catálogo: el usuario puede ver todos los libros creados, con opción de búsqueda y filtrado por categoría.
-3. Editar detalles del libro: el usuario puede ver y editar la información de cada libro individualmente.
+1. Crear un libro asistido por IA.
+2. Ver catálogo de libros.
+3. Filtrar libros por categorías.
+4. Editar un libro existente.
 
 ## Pantallas
 ### Crear con IA
-- **Layout**: Formulario corto con un campo de texto para prompt.
-- **CTA**: Botón "Generar borrador".
+- **Layout**: Formulario que incluye campos para: prompt de idea, botón para generar borrador y opción para guardar el libro.
+- **CTA**: Botón claro para "Crear libro".
 - **Estados**: 
-  - **empty**: No hay prompt ingresado.
-  - **loading**: Esperando respuesta de IA.
-  - **success**: Borrador generado con información editable.
-  - **error**: Mensaje de error si falla la generación.
+  - **Empty**: Mensaje indicando que no hay entradas aún.
+  - **Loading**: Indicador de carga al generar el borrador.
+  - **Success**: Mensaje de confirmación al guardar el libro.
+  - **Error**: Mensaje de error si la creación falla. 
 
 ### Catálogo
-- **Layout**: Grid o lista de libros con opción de búsqueda en la parte superior.
-- **Filtros**: Categorías visibles para filtrar.
+- **Layout**: Lista/grid de libros con opciones de búsqueda y un filtro desplegable.
+- **CTA**: Botón para "Agregar nuevo libro".
 - **Estados**:  
-  - **empty**: Mensaje que indica que no hay libros creados.
-  - **loading**: Indicador mientras se cargan los libros.
-  - **success**: Listado de libros visible.
-  - **error**: Mensaje si ocurre un error al cargar.
+  - **Empty**: Mensaje indicando que no hay libros disponibles.
+  - **Loading**: Indicador de carga al buscar libros.
+  - **Error**: Mensaje de error si la carga falla.
 
 ### Detalle
-- **Layout**: Campos editables para título, sinopsis y categoría.
-- **CTA**: Botón para "Guardar cambios" y opción para "Eliminar libro".
+- **Layout**: Vista específica de un libro con campos editables: título, sinopsis, categoría y estado.
+- **CTA**: Botón para "Guardar cambios".
 - **Estados**:  
-  - **empty**: Mensaje para indicar que no se puede editar si no hay información.
-  - **loading**: Cargando los detalles del libro.
-  - **success**: Detalles cargados y editables.
-  - **error**: Mensaje si falla la carga.
+  - **Loading**: Indicador de carga al realizar cambios.
+  - **Success**: Mensaje de confirmación al guardar cambios.
+  - **Error**: Mensaje de error si la edición falla.
 
 ## Componentes
-- **Reusar**: Botones de acción, formularios de entrada.
-- **Nuevos**: Componente de visualización de categorías.
+- Reusar: Input, Botones, Lista de Libros.
+- Nuevos: Filtro de Categorías, Indicadores de carga.
 
 ## Tokens
 - Archivo: `src/styles/tokens.css`
-- Acento: color principal de la UI.
-- Notas de implementación: Asegurarse de usar variables de CSS en todos los componentes para asegurar consistencia.
+- Acento: `--color-accent` utilizado en botones principales y elementos destacados.
+- Notas de implementación: Asegurarse de que todos los colores y espaciados sigan los tokens definidos para una consistencia visual.
