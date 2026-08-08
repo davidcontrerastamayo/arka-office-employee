@@ -1,8 +1,3 @@
-# React 19 App
+# Nueva rama main
 
-Este es el template inicial para una aplicación de React 19.
-
-## Comandos disponibles
-
-- `npm start`: Inicia la aplicación.
-- `npm run build`: Compila la aplicación para producción.
+Esta es una nueva rama creada para realizar el push de cambios.
