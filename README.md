@@ -1,3 +1,3 @@
-# Nueva rama main
+# Cambios en la rama main
 
-Esta es una nueva rama creada para realizar el push de cambios.
+Se ha creado la rama main con un cambio mínimo.
