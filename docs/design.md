@@ -1,75 +1,31 @@
 # Design — Editorial MVP
 
 ## Objetivo
-Construir un MVP usable (web) donde un usuario pueda crear un libro asistido por IA, ver un catálogo/listado de libros y filtrar y categorizar libros.
+Construir un MVP web de gestión editorial que permita listar, crear y editar publicaciones.
 
 ## Flujo
-1. Crear libro asistido por IA (título, sinopsis, categoría, capítulos).
-2. Ver catálogo/listado de libros.
-3. Filtrar y categorizar libros.
+1. Listar publicaciones.
+2. Ver detalle de una publicación.
+3. Crear y editar publicación.
 
 ## Pantallas
-### Crear con IA
-- Layout: Formulario corto (idea/prompt) → generar borrador → editar → guardar.
-- CTA: Crear libro.
-- Estados: 
-  - Empty: Formulario vacío.
-  - Loading: Generando borrador.
-  - Error: No se pudo generar el libro.
-  - Success: Libro creado con éxito.
+### Crear / Editar Publicación
+- Layout: Formulario sencillo con campos para título, estado, fecha y autor.
+- CTA: Botón de "Guardar".
 
 ### Catálogo
-- Layout: Lista de libros.
-- Filtros por categoría.
-- Estados: 
-  - Empty: No hay libros para mostrar.
-  - Loading: Cargando libros.
+- Layout: Listado de publicaciones con título, estado, fecha, autor y botón "Editar".
+- Empty state: Mensaje indicando que no hay publicaciones disponibles.
 
 ### Detalle
-- Layout: Ver/editar libro existente.
-- Campos: título, sinopsis, categoría.
-- Estados: 
-  - Loading: Cargando detalles del libro.
-  - Error: No se pudo cargar el libro.
+- Layout: Mostrar todos los detalles de la publicación seleccionada.
+- Editar categoría-estado.
 
 ## Componentes
-- Reusar: Botón de crear, formulario de entrada.
-- Nuevos: Componente de catálogo y detalle de libro.
+- Reusar: PublicationList, PublicationDetail, EditPublicationForm.
+- Nuevos: Ninguno.
 
 ## Tokens
 - Archivo: `src/styles/tokens.css`
-- Acento: #0f766e
-- Notas de implementación: Asegurarse de aplicar tokens en la UI usando var(--color-...).
-
-### src/styles/tokens.css
-:root {
-  --color-bg: #f7f5f2;
-  --color-surface: #ffffff;
-  --color-text: #1c1917;
-  --color-muted: #78716c;
-  --color-accent: #0f766e;
-  --color-border: #e7e5e4;
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
-  --font-display: "Fraunces", Georgia, serif;
-}
-
-### src/index.css
-@import './styles/tokens.css';
-
-:root {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-sans);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
+- Acento: `--color-accent`
+- Notas de implementación: Usar las variables de CSS para todos los estilos.

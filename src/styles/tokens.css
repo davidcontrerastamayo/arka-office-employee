@@ -1,16 +1,14 @@
 :root {
-  --color-bg: #f7f5f2;
+  --color-bg: #ecf0f1;
   --color-surface: #ffffff;
-  --color-text: #1c1917;
-  --color-muted: #78716c;
-  --color-accent: #0f766e;
-  --color-border: #e7e5e4;
-  --radius-sm: 6px;
-  --radius-md: 12px;
+  --color-text: #2c3e50;
+  --color-muted: #95a5a6;
+  --color-accent: #3498db;
+  --color-border: #bdc3c7;
+  --radius-sm: 4px;
+  --radius-md: 8px;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;
-  --space-4: 24px;
-  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
-  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: 'Arial', sans-serif;
 }
