@@ -1,18 +1,24 @@
-# Cómo ejecutar/demostrar el MVP Editorial
+# Cómo correr el MVP Editorial AI
 
-## Pasos para probar
-1. Clona el repositorio en tu máquina local y navega a la carpeta del proyecto.
-2. Asegúrate de tener las dependencias necesarias instaladas:
+## Instrucciones para probar la aplicación
+
+1. **Instalación de dependencias**:
+   Asegúrate de que todas las dependencias estén instaladas ejecutando:
    ```bash
    npm install
    ```
-3. Inicia el servidor de desarrollo:
+
+2. **Ejecutar la aplicación**:
+   Para iniciar el server de desarrollo, ejecuta:
    ```bash
    npm run dev
    ```
-4. Abre tu navegador y ve a `http://localhost:3000` (o el puerto que indicue la terminal).
-5. Prueba las siguientes características:
-   - **Crear un libro**: Ingresa un prompt en el formulario y genera un borrador.
-   - **Ver catálogo**: Una vez creado, deberías ver el libro en el catálogo.
-   - **Filtrar por categoría**: Usa el filtro para buscar por la categoría correspondiente.
-   - **Detalles de libro**: Haz clic en un libro del catálogo para editar su información.
+
+3. **Acceder a la aplicación**:
+   Abre tu navegador y ve a `http://localhost:3000` para interactuar con la aplicación.
+
+## Funcionalidades del MVP
+
+- **Crear un libro**: Usa el formulario para ingresar un prompt. Se generará un borrador automáticamente.
+- **Ver y filtrar libros**: Accede al catálogo para ver los libros creados y filtra por categoría.
+- **Editar detalles del libro**: Accede a la vista Detalle para ver y editar los campos del libro.
