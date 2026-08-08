@@ -1,45 +1,32 @@
 # Design — Editorial MVP
 
 ## Objetivo
-Diseñar una interfaz clara, moderna y funcional para el MVP Editorial AI, donde los usuarios puedan interactuar con el sistema para crear, visualizar y categorizar libros.
+Construir un MVP usable en el que los usuarios puedan crear, visualizar y categorizar libros utilizando IA.
 
 ## Flujo
-1. Crear un libro asistido por IA.
-2. Ver catálogo de libros.
-3. Filtrar libros por categorías.
-4. Editar un libro existente.
+1. Crear un libro asistido por IA (título, sinopsis, categoría, capítulos borrador).
+2. Ver un catálogo/listado de libros.
+3. Filtrar y categorizar libros.
 
 ## Pantallas
 ### Crear con IA
-- **Layout**: Formulario que incluye campos para: prompt de idea, botón para generar borrador y opción para guardar el libro.
-- **CTA**: Botón claro para "Crear libro".
-- **Estados**: 
-  - **Empty**: Mensaje indicando que no hay entradas aún.
-  - **Loading**: Indicador de carga al generar el borrador.
-  - **Success**: Mensaje de confirmación al guardar el libro.
-  - **Error**: Mensaje de error si la creación falla. 
+- Layout simple con un campo de texto para ingresar el prompt y un botón de generar.
+- Estados: vacío (sin entrada), loading (esperando respuesta), success (libro creado), error (mensaje de error si no se puede crear).
 
 ### Catálogo
-- **Layout**: Lista/grid de libros con opciones de búsqueda y un filtro desplegable.
-- **CTA**: Botón para "Agregar nuevo libro".
-- **Estados**:  
-  - **Empty**: Mensaje indicando que no hay libros disponibles.
-  - **Loading**: Indicador de carga al buscar libros.
-  - **Error**: Mensaje de error si la carga falla.
+- Layout con listado de libros en forma de grid, cada libro presentado con título y categoría.
+- Estados: empty (mensaje si no hay libros), loading (esperando datos), error (si ocurre un error al cargar).
 
 ### Detalle
-- **Layout**: Vista específica de un libro con campos editables: título, sinopsis, categoría y estado.
-- **CTA**: Botón para "Guardar cambios".
-- **Estados**:  
-  - **Loading**: Indicador de carga al realizar cambios.
-  - **Success**: Mensaje de confirmación al guardar cambios.
-  - **Error**: Mensaje de error si la edición falla.
+- Mostrar información del libro seleccionado: título, sinopsis, categoría, estado y capítulos.
+- Botones para editar y cambiar estado/categoría.
+- Estados: loading (esperando datos), error (si ocurre un error al cargar).
 
 ## Componentes
-- Reusar: Input, Botones, Lista de Libros.
-- Nuevos: Filtro de Categorías, Indicadores de carga.
+- Reusar: Inputs, Botones.
+- Nuevos: Componente libro (para mostrar en el catálogo).
 
 ## Tokens
 - Archivo: `src/styles/tokens.css`
-- Acento: `--color-accent` utilizado en botones principales y elementos destacados.
-- Notas de implementación: Asegurarse de que todos los colores y espaciados sigan los tokens definidos para una consistencia visual.
+- Acento: `--color-accent: #0f766e;`
+- Notas de implementación: Asegurarse de utilizar los tokens de color y espaciado en todas las pantallas y componentes.
