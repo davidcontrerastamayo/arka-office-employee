@@ -1,24 +1,29 @@
-# Instrucciones para correr el MVP Editorial
+# Editorial MVP - Instructions to Run
 
-## Instalación
+## Prerequisites
+- Node.js installed on your machine.
 
-1. Clona el repositorio y navega al directorio del proyecto.
-2. Ejecuta el siguiente comando para instalar las dependencias:
+## Steps to Run the Application
+1. Clone the repository: 
+   ```bash
+   git clone https://github.com/davidcontrerastamayo/arka-office-employee
+   cd arka-office-employee
+   ```
+2. Install the dependencies: 
    ```bash
    npm install
    ```
-
-## Ejecución
-
-1. Para correr el servidor de desarrollo, utiliza:
+3. Run the development server: 
    ```bash
    npm run dev
    ```
+4. Open your browser and navigate to `http://localhost:3000`.
 
-2. Accede a la aplicación en tu navegador en `http://localhost:3000`.
+## Features
+- View the list of publications with title, status, date, and author.
+- Create or edit publications using a form.
+- Search for publications by title.
+- Filter publications by status (e.g., Published, Draft, Review).
 
-## Características
-- Listado de publicaciones (aunque esté vacío, con un mensaje claro).
-- Crear una nueva publicación que aparece en el listado.
-- Editar publicaciones, donde los cambios se guardan y persisten gracias a `localStorage`.
-- Funcionalidad de búsqueda o filtro por título y estado.
+## Notes
+- Changes in publication data are persisted using localStorage.
