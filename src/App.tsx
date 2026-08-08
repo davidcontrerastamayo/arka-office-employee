@@ -13,6 +13,9 @@ const App = () => {
   }, [publications]);
 
   const handleCreateOrUpdate = (publication) => {
+    // Check if publication has a title for validation
+    if (!publication.title) return;
+
     const updatedPublications = selectedPublication
       ? publications.map((pub) => (pub.id === publication.id ? publication : pub))
       : [
