@@ -1,39 +1,41 @@
 import React, { useState } from 'react';
 
-const BookDetail: React.FC<{ book: any, onSave: (book: any) => void }> = ({ book, onSave }) => {
-    const [editedBook, setEditedBook] = useState(book);
+const BookDetail = ({ book, onUpdate }) => {
+  const [title, setTitle] = useState(book.title);
+  const [synopsis, setSynopsis] = useState(book.synopsis);
+  const [category, setCategory] = useState(book.category);
+  const [state, setState] = useState(book.state);
 
-    const handleChange = (field: string, value: string) => {
-        setEditedBook({ ...editedBook, [field]: value });
-    };
+  const handleSave = () => {
+    onUpdate({ ...book, title, synopsis, category, state });
+  };
 
-    const handleSave = () => {
-        onSave(editedBook);
-    };
-
-    return (
-        <div>
-            <h2>Editar Libro</h2>
-            <label>Título</label>
-            <input
-                type="text"
-                value={editedBook.title}
-                onChange={(e) => handleChange('title', e.target.value)}
-            />
-            <label>Sinopsis</label>
-            <textarea
-                value={editedBook.synopsis}
-                onChange={(e) => handleChange('synopsis', e.target.value)}
-            />
-            <label>Categoría</label>
-            <input
-                type="text"
-                value={editedBook.category}
-                onChange={(e) => handleChange('category', e.target.value)}
-            />
-            <button onClick={handleSave}>Guardar cambios</button>
-        </div>
-    );
+  return (
+    <div>
+      <h2>Detalle del Libro</h2>
+      <input
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Título"
+      />
+      <textarea
+        value={synopsis}
+        onChange={(e) => setSynopsis(e.target.value)}
+        placeholder="Sinopsis"
+      />
+      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value='Ficción'>Ficción</option>
+        <option value='No ficción'>No ficción</option>
+        <option value='Infantil'>Infantil</option>
+        <option value='Poesía'>Poesía</option>
+      </select>
+      <select value={state} onChange={(e) => setState(e.target.value)}>
+        <option value='draft'>Borrador</option>
+        <option value='published'>Publicado</option>
+      </select>
+      <button onClick={handleSave}>Guardar Cambios</button>
+    </div>
+  );
 };
 
 export default BookDetail;
