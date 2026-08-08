@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const EditPublicationForm = ({ publication, onSubmit }) => {
-  const [title, setTitle] = useState(publication.title);
-  const [status, setStatus] = useState(publication.status);
-  const [date, setDate] = useState(publication.date);
-  const [author, setAuthor] = useState(publication.author);
+  const [title, setTitle] = useState(publication?.title || '');
+  const [status, setStatus] = useState(publication?.status || '');
+  const [date, setDate] = useState(publication?.date || '');
+  const [author, setAuthor] = useState(publication?.author || '');
+
+  useEffect(() => {
+    if (publication) {
+      setTitle(publication.title);
+      setStatus(publication.status);
+      setDate(publication.date);
+      setAuthor(publication.author);
+    }
+  }, [publication]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
