@@ -1,8 +1,8 @@
 import React from 'react';
-import SignupComponent from '../../components/SignupComponent';
+import Signup from '../../components/signup/Signup';
 
 const SignupContainer: React.FC = () => {
-  return <SignupComponent />;
+  return <Signup />;
 };
 
 export default SignupContainer;
