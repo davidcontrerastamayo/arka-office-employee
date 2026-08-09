@@ -1,3 +1,6 @@
-# Nueva Orden
+# Archivos del nuevo alcance
 
-El objetivo de esta nueva orden es eliminar el directorio Oficina y reestructurar el proyecto.
+- /components
+- /containers
+- /typings
+- /constants
