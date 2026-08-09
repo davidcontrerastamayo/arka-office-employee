@@ -1,13 +1,14 @@
 import React from 'react';
-import './App.css';
+import Login from './containers/login';
+import Signup from './containers/signup';
 
 const App: React.FC = () => {
-    return (
-        <div className="App">
-            <h1>Editorial Management</h1>
-            <p>Your content management system is ready!</p>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Login />
+      <Signup />
+    </div>
+  );
 };
 
 export default App;
