@@ -1,14 +1,11 @@
 import React from 'react';
-import Login from './containers/login';
-import Signup from './containers/signup';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="App">
-      <Login />
-      <Signup />
+    <div className='App'>
+      <h1>Welcome to the Arka Office App</h1>
     </div>
   );
-};
+}
 
 export default App;
