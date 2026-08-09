@@ -1,1 +1,0 @@
-This file contains the documentation for deleting unnecessary files.
