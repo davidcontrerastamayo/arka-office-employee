@@ -1,15 +1,1 @@
-{  
-  "name": "web",  
-  "version": "1.0.0",  
-  "private": true,  
-  "dependencies": {  
-    "react": "^17.0.1",  
-    "react-dom": "^17.0.1",  
-    "next": "10.0.0"  
-  },  
-  "scripts": {  
-    "dev": "next dev",  
-    "build": "next build",  
-    "start": "next start"  
-  }  
-}
+{\n  "name": "web-app",\n  "private": true,\n  "version": "0.1.0",\n  "scripts": {\n    "dev": "vite",\n    "build": "vite build"\n  },\n  "dependencies": {\n    "react": "^17.0.2",\n    "react-dom": "^17.0.2",\n    "@tanstack/react-query": "^3.22.0"\n  },\n  "devDependencies": {\n    "vite": "^2.6.10",\n    "@types/react": "^17.0.2",\n    "@types/react-dom": "^17.0.2"\n  }\n}

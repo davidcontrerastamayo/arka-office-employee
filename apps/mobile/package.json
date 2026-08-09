@@ -1,14 +1,1 @@
-{  
-  "name": "mobile",  
-  "version": "1.0.0",  
-  "private": true,  
-  "dependencies": {  
-    "react": "^17.0.1",  
-    "react-native": "^0.64.2"  
-  },  
-  "scripts": {  
-    "start": "react-native start",  
-    "android": "react-native run-android",  
-    "ios": "react-native run-ios"  
-  }  
-}
+{\n  "name": "mobile-app",\n  "private": true,\n  "version": "0.1.0",\n  "scripts": {\n    "start": "react-native start",\n    "android": "react-native run-android",\n    "ios": "react-native run-ios"\n  },\n  "dependencies": {\n    "react-native": "^0.66.0"\n  }\n}
