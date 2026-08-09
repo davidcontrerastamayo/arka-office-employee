@@ -1,7 +1,12 @@
 import React from 'react';
 
-const Signup: React.FC = () => {
-    return <div>Signup Component</div>;
+const Signup = () => {
+    return (
+        <div>
+            <h1>Signup</h1>
+            {/* Signup form will be added here */}
+        </div>
+    );
 };
 
 export default Signup;
