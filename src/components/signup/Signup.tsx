@@ -3,8 +3,8 @@ import React from 'react';
 const Signup = () => {
     return (
         <div>
-            <h1>Signup</h1>
-            {/* Signup form will be added here */}
+            <h2>Signup</h2>
+            {/* Signup form will go here */}
         </div>
     );
 };
