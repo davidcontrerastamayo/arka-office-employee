@@ -1,0 +1,1 @@
+import React from 'react';\nimport { View, Text } from 'react-native';\n\nconst App = () => {\n  return (\n    <View>\n      <Text>Mobile Application</Text>\n    </View>\n  );\n};\n\nexport default App;

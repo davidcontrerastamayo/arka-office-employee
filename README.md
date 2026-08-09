@@ -1,1 +1,1 @@
-# arka-office-employee
+# Arka Office Employee\n\nThis is a monorepo architecture project for Arka Office Employee with both web and mobile applications.

@@ -1,0 +1,1 @@
+import React from 'react';\n\nconst App: React.FC = () => {\n  return (\n    <div>\n      <h1>Web Application</h1>\n    </div>\n  );\n};\n\nexport default App;

@@ -1,1 +1,1 @@
-{ "name": "web", "version": "1.0.0", "private": true, "dependencies": { "react": "19", "react-dom": "19", "react-router-dom": "^6.0.0", "@tanstack/react-query": "^3.0.0" } }
+{\n  "name": "web",\n  "version": "1.0.0",\n  "private": true,\n  "scripts": {\n    "start": "react-scripts start",\n    "build": "react-scripts build",\n    "test": "react-scripts test",\n    "eject": "react-scripts eject"\n  },\n  "dependencies": {\n    "react": "19.0.0",\n    "react-dom": "19.0.0",\n    "react-router-dom": "latest",\n    "@tanstack/react-query": "latest"\n  }\n}

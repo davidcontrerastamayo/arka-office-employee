@@ -1,0 +1,1 @@
+{\n  "name": "packages",\n  "version": "1.0.0",\n  "private": true,\n  "dependencies": {\n    "i18next": "latest",\n    "convex": "latest"\n  }\n}

@@ -1,13 +1,1 @@
-{
-  "name": "arka-office-employee",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "start": "vite",
-    "build": "vite build"
-  },
-  "devDependencies": {
-    "vite": "latest"
-  }
-}
+{\n  "private": true,\n  "workspaces": [\n    "apps/*",\n    "packages/*"\n  ]\n}
