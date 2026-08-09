@@ -1,0 +1,1 @@
+{"pipeline":{"build":"next build","lint":"eslint .","test":"jest"}}}
